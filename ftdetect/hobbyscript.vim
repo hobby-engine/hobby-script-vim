@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.hb set filetype=hobbyscript
+au BufNewFile,BufRead *.hbs set filetype=hobbyscript
