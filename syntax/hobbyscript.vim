@@ -22,7 +22,7 @@ syn match   hbType        /[^a-z0-9][A-Z][A-z0-9_]*/hs=s+1
 
 syn match   hbNumber      /\<\d\+\>/
 syn match   hbNumber      /\<\d\+\.\d*/
-syn match   hbOperator    /=|\+=|-=|\*=|\/=|%=|\*\*=|\+|-|\*\*|\*|\/|%|\<|\>|\<=|\>=|==|!=|\.\.|&&|\|\|/
+syn match   hbOperator    /=|\+=|-=|\*=|\/=|%=|\*\*=|\+|-|\*\*|\*|\/|%|\<|\>|\<=|\>=|==|!=|\.\./
 
 syn region  hbString      start="\"" end="\"" contains=hbEscape
 syn region  hbString      start="'"  end="'" contains=hbEscape
