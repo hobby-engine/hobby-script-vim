@@ -6,7 +6,7 @@ syn keyword hbStatement   break continue return self
 syn keyword hbStructure   const var
 syn keyword hbModifier    static global
 syn keyword hbLiteral     true false null
-syn keyword hbOperator    not and or
+syn keyword hbOperator    is
 
 syn keyword hbCond        if switch else case
 syn keyword hbRepeat      while for loop
@@ -22,7 +22,7 @@ syn match   hbType        /[^a-z0-9][A-Z][A-z0-9_]*/hs=s+1
 
 syn match   hbNumber      /\<\d\+\>/
 syn match   hbNumber      /\<\d\+\.\d*/
-syn match   hbOperator    /=|\+=|-=|\*=|\/=|%=|\*\*=|\+|-|\*\*|\*|\/|%|\<|\>|\<=|\>=|==|!=|\.\./
+syn match   hbOperator    /=|\+=|-=|\*=|\/=|%=|\*\*=|\+|-|\*\*|\*|\/|%|\<|\>|\<=|\>=|==|!=|\.\.|&&|\|\|/
 
 syn region  hbString      start="\"" end="\"" contains=hbEscape
 syn region  hbString      start="'"  end="'" contains=hbEscape
