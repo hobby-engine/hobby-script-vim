@@ -6,7 +6,7 @@ syn keyword hbStatement   break continue return self
 syn keyword hbStructure   const var
 syn keyword hbModifier    static global
 syn keyword hbLiteral     true false null
-syn keyword hbOperator    not and or is
+syn keyword hbOperator    is
 
 syn keyword hbCond        if switch else case
 syn keyword hbRepeat      while for loop
