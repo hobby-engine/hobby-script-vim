@@ -43,6 +43,7 @@ hi def link hbCond        Conditional
 hi def link hbRepeat      Repeat
 hi def link hbModifier    StorageClass
 hi def link hbType        Type
+hi def link hbString      hbFmtString
 hi def link hbString      String
 hi def link hbOperator    Operator
 hi def link hbNumber      Constant
