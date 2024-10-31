@@ -24,12 +24,15 @@ syn match   hbNumber      /\<\d\+\>/
 syn match   hbNumber      /\<\d\+\.\d*/
 syn match   hbOperator    /=|\+=|-=|\*=|\/=|%=|\*\*=|\+|-|\*\*|\*|\/|%|\<|\>|\<=|\>=|==|!=|\.\./
 
-syn region  hbString      start="\"" end="\"" contains=hbEscape
-syn region  hbString      start="'"  end="'" contains=hbEscape
-syn region  hbString      start="$\"" end="\"" contains=hbEscape
-syn region  hbString      start="$'"  end="'" contains=hbEscape
+syn region  hbString      start="\""  end="\"" excludenl contains=hbEscape
+syn region  hbString      start="'"   end="'"  excludenl contains=hbEscape
+
+syn region	hbFmtString start=+\$"+ end=+"+ extend contains=hbEscape,hbInterpolation
+syn region	hbInterpolation	start=+{+ end=+}+ contained contains=@hbAll
 
 syn match   hbEscape      /\\[ntra{"'\\]/
+
+syn cluster hbAll contains=hbStatement,hbStructure,hbModifier,hbLiteral,hbOperator,hbCond,hbRepeat,hbFunction,hbType,hbNumber,hbString
 
 hi def link hbEscape      Special
 hi def link hbStructure   Structure
