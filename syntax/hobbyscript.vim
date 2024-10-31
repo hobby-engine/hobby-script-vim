@@ -26,8 +26,10 @@ syn match   hbOperator    /=|\+=|-=|\*=|\/=|%=|\*\*=|\+|-|\*\*|\*|\/|%|\<|\>|\<=
 
 syn region  hbString      start="\"" end="\"" contains=hbEscape
 syn region  hbString      start="'"  end="'" contains=hbEscape
+syn region  hbString      start="$\"" end="\"" contains=hbEscape
+syn region  hbString      start="$'"  end="'" contains=hbEscape
 
-syn match   hbEscape      /\\[ntra"'\\]/
+syn match   hbEscape      /\\[ntra{"'\\]/
 
 hi def link hbEscape      Special
 hi def link hbStructure   Structure
