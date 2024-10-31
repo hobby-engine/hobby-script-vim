@@ -28,7 +28,7 @@ syn region  hbString      start="\""  end="\"" excludenl contains=hbEscape
 syn region  hbString      start="'"   end="'"  excludenl contains=hbEscape
 
 syn region	hbFmtString start=+\$"+ end=+"+ extend contains=hbEscape,hbInterpolation
-syn region	hbInterpolation	start=+{+ end=+}+ contained contains=@hbAll
+syn region	hbInterpolation	start=+{+ end=+}+ keepend contained contains=@hbAll
 
 syn match   hbEscape      /\\[ntra{"'\\]/
 
