@@ -2,7 +2,7 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn keyword hbStatement   break continue return self
+syn keyword hbStatement   break continue return self unreachable
 syn keyword hbStructure   const var
 syn keyword hbModifier    static global
 syn keyword hbLiteral     true false null
